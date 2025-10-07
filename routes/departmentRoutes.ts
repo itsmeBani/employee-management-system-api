@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import * as departmentController from '../controllers/department.controller';
 
 const router = Router();
+import * as departmentController from "../controllers/department/departmentController.ts"
 
 router.post('/', departmentController.createDepartment);
 router.get('/', departmentController.getAllDepartments);

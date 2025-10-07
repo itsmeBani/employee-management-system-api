@@ -1,4 +1,4 @@
-import { firestore } from 'firebase-admin';
+import type { firestore } from 'firebase-admin';
 
 export interface Department {
     id?: string;
@@ -24,6 +24,7 @@ export interface Employee {
     hireDate: firestore.Timestamp;
     isActive: boolean;
     createdAt?: firestore.Timestamp;
+    updatedAt?:firestore.Timestamp
 }
 
 export interface AttendanceRecord {
@@ -32,3 +33,6 @@ export interface AttendanceRecord {
     type: 'time-in' | 'time-out';
     location: string;
 }
+
+
+export type Document = "employees" | "departments"|"position"|"attendance"

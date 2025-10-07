@@ -1,7 +1,8 @@
 import { Router } from 'express';
-import * as positionController from '../controllers/position.controller';
 
 const router = Router();
+import * as positionController from "../controllers/position/positionController.ts";
+
 
 router.post('/', positionController.createPosition);
 router.get('/', positionController.getAllPositions);
